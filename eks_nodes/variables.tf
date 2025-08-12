@@ -3,8 +3,7 @@ variable "region" {
 }
 
 variable "availability_zone" {
-  type        = list(string)
-  description = "List of Az's in my region"
+  type = list(string)
 }
 
 variable "eks_cluster_name" {
