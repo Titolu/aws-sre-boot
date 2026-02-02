@@ -9,3 +9,9 @@ resource "aws_s3_bucket" "security_bucket" {
   }
 }
 
+resource "aws_s3_object" "object" {
+  depends_on = [aws_s3_bucket.security_bucket]
+  bucket     = var.bucket_name
+  key        = "myCV.pdf"
+  source     = "${path.module}/files/myCV.pdf"
+}
