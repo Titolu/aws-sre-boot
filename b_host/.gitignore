@@ -1,6 +1,15 @@
+# Terraform working dir
+**/.terraform/
+
+# State files
+**/*.tfstate
+**/*.tfstate.*
+**/terraform.tfstate.d/
+
+# Variables (often secrets)
+**/*.tfvars
+**/terraform.tfvars
+
+# macOS
 .DS_Store
-.terraform/
-terraform.tfstate
-terraform.tfvars
-terraform.tfstate.backup
-files/
+**/.DS_Store
