@@ -6,8 +6,8 @@ locals {
 
   # This is a new method of using COUNT
   subnet_ip = [
-    { subnet_cidr = "10.0.1.0/27" }, #Public - 0
-    { subnet_cidr = "10.0.2.0/27" }  #Private - 1
+    { subnet_cidr = "10.0.1.0/24" }, #Public - 0
+    { subnet_cidr = "10.0.2.0/24" }  #Private - 1
   ]
 
 

@@ -9,14 +9,16 @@ resource "aws_vpc_security_group_ingress_rule" "bastion_ssh" {
   ip_protocol = "tcp"
   from_port   = 22
   to_port     = 22
-  cidr_ipv4   = "0.0.0.0/0"
+  cidr_ipv4   = "92.17.239.230/32" # This should be your organisation/workstation IP
 }
 
 resource "aws_vpc_security_group_egress_rule" "bastion_eg_ssh" {
   security_group_id = aws_security_group.bastion_sg.id
 
-  ip_protocol = "-1"
-  cidr_ipv4   = "0.0.0.0/0"
+  ip_protocol = "tcp"
+  from_port   = 22
+  to_port     = 22
+  cidr_ipv4   = "10.0.2.0/24"
 }
 
 
